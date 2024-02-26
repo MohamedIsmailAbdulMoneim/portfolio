@@ -1,3 +1,14 @@
 {
-  "CodeGPT.apiKey": "CodeGPT Plus Beta"
+  "CodeGPT.apiKey": "CodeGPT Plus Beta",
+  "liveSassCompile.settings.formats": [
+
+
+
+    {
+      "format": "compressed",
+      "extensionName": ".css",
+      "savePath": "/styles",
+      "savePathReplacementPairs": null
+    }
+  ]
 }

@@ -1,0 +1,112 @@
+@import "./mixins";
+
+.bio__box {
+    width: 250px;
+    height: 250px;
+    background-color: red;
+    display: none;
+  
+  }
+  
+  
+  
+  .bio {
+    @include twoColumns($column-gap: 7.4rem, $row-gap: 0);
+    // grid-template-columns: repeat(2, 1fr);
+    // column-gap: 7.4rem;
+  }
+  
+  .bio__heading {
+    font-size: var(--font-size-40);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+  }
+  
+  .bio__objective {
+    color: var(--color-text);
+  }
+  
+  .bio__name {
+    font-weight: var(--font-weight-semi-bold);
+  }
+  
+  .bio__arrow {
+    display: inline-block;
+    animation: jump 1s infinite alternate ease-in-out;
+  }
+  
+  .bio__almdrasa {
+    color: var(--color-green);
+  }
+  .bio__facebook {
+    color: var(--color-blue);
+  }
+  .bio__twitter {
+    color: var(--color-light-blue);
+  }
+  .bio__linkedin {
+    color: var(--color-dark-blue);
+  }
+  .bio__youtube {
+    color: var(--color-red);
+  }
+  
+  .bio__links {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 2rem;
+    font-weight: var(--font-weight-semi-bold);
+    text-decoration: none;
+  }
+  
+  .say-hi-link {
+    background-color: var(--color-link-bg);
+    color: var(--color-white);
+    padding: 0.7rem 4.7rem;
+  }
+  
+  .find-out-link {
+    padding: 0.7rem 0;
+    color: var(--color-white);
+    margin-inline-start: 1.4rem;
+  }
+  
+  @keyframes jump {
+    0% {
+      transform: translateY(0.5rem);
+    }
+  
+    30% {
+      transform: translateY(-0.5rem);
+    }
+  
+    70% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  .bio__pic-content {
+    display: flex;
+    position: relative;
+    align-items: end;
+    justify-self: end;
+  }
+  
+  .bio__pic-content::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-box-img);
+    width: 100%;
+    height: 34rem;
+    z-index: -1;
+    border-radius: 1.8rem;
+    box-shadow: 2.17543px 8.7017px 38.0699px;
+  }
+  
+  .bio__pic {
+    width: 35.7rem;
+  }
